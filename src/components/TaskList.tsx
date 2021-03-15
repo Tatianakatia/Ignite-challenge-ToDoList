@@ -49,15 +49,12 @@ export function TaskList() {
 
   function handleRemoveTask(id: number) {
     // Remova uma task da listagem pelo ID
-    const removeTask = tasks.filter((task) => task.id !== id);
+    const removeTasks = tasks.filter(task => task.id !== id);
 
     if(!window.confirm("Would you like to remove this task?")
-    ) {
-      window.open("exit.html", "Thanks for Visiting!");
-    }
-    
-    return;
-    setTasks(removeTask);
+    ) 
+       
+    setTasks(removeTasks);
 
   }
 
